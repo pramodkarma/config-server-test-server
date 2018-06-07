@@ -1,0 +1,46 @@
+server:  
+  port: ${PORT:8080}
+  
+spring:
+  http:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+zuul:
+  routes:
+    auth:
+      path: /auth/**
+      sensitiveHeaders:
+      url: http://localhost:8000
+    member-service:
+      path: /member-service/**
+      sensitiveHeaders:
+      url: http://localhost:9001
+    user-service:
+      path: /userdetails-service/**
+      sensitiveHeaders:
+      url: http://localhost:9003
+    report-abuse-service:
+      path: /report-abuse-service/**
+      sensitiveHeaders:
+      url: http://localhost:9004
+    media-service:
+      path: /media-service/**
+      sensitiveHeaders:
+      url: http://localhost:9005
+    blog-post-services:
+      path: /blog-post-services/**
+      sensitiveHeaders:
+      url: http://localhost:9006
+    dictionary-service:
+      path: /dictionary-service/**
+      sensitiveHeaders:
+      url: http://localhost:9007
+
+# Discovery Server Access
+eureka:
+    client:
+      serviceUrl:
+        defaultZone: http://localhost:1111/eureka/
+
+        
