@@ -12,7 +12,7 @@ spring:
      ddl-auto: update 
   datasource:
     platform: mysql
-    url: jdbc:mysql://localhost:3306/inspiratti?autoReconnect=true&useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&useSSL=false
+    url: jdbc:mysql://10.145.81.19:3306/inspiratti?autoReconnect=true&useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&useSSL=false
     username: root
     password: root
   application:
@@ -23,12 +23,12 @@ spring:
 security:
   oauth2:
     resource:
-      userInfoUri: http://localhost:8000/user
+      userInfoUri: http://10.145.81.19:8000/user
   
 
 
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:1111/eureka/
+      defaultZone: http://10.145.81.19:1111/eureka/
       
