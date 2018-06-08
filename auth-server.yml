@@ -19,6 +19,6 @@ spring:
     platform: mysql
     url: jdbc:mysql://localhost:3306/inspiratti?autoReconnect=true&useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&useSSL=false
     username: root
-    password: root@123
+    password: Root@123
   application:
     name: auth-server
