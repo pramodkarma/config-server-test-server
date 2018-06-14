@@ -31,4 +31,14 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://10.145.81.19:1111/eureka/
+
+
+logging:
+  level:
+    org.springframework.web: ERROR
+    com.mkyong: DEBUG
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+  file: /var/www/html/upload/blog-application.log
       
